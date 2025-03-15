@@ -64,3 +64,35 @@ Key benefits include:
 - One-time Cost: No recurring subscription fees or add-on purchases
 
 Contact Manager Pro bridges the gap between overly simplified address books and complex customer relationship management systems, providing the perfect balance of functionality and usability for individual and small business needs.
+
+Core Architecture Components:
+
+1. Application Layer
+   - `ContactManagerApp`: Entry point and main application class
+   - `MainFrame`: Primary window containing all UI components
+
+2. MVC Pattern Implementation
+   - Model: `Contact`, `Address`, `Category`, `ImportantDate` classes
+   - View: UI panels like `ContactListPanel`, `ContactDetailsPanel`, `SearchPanel`
+   - Controller: `ContactController` coordinating between UI and data
+
+3. Data Management
+   - `ContactRepository` and `CategoryRepository`: Handle CRUD operations
+   - `DataStore`: Manages the underlying database connection and operations
+
+4. UI Components
+   - Various panels to display and interact with contact information
+   - `DialogFactory`: Creates standard dialogs for common operations
+
+5. Utility Services
+   - `ContactImporter`/`ContactExporter`: Handle data interchange with other systems
+   - `ReminderService`: Manages important date notifications
+   - `NotificationService`: Displays alerts to users
+
+ Key Relationships:
+
+- Contacts can belong to multiple categories (many-to-many)
+- Each contact can have multiple important dates and phone numbers
+- The Controller acts as an intermediary between UI components and data repositories
+
+![ContactManagerApp-2025-03-15-161658](https://github.com/user-attachments/assets/dddd3e82-c84e-4c9b-b2df-85fd98367457)
